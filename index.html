@@ -66,11 +66,32 @@
       <blockquote>“기술은 <span>사람을 더 사람답게</span> 일하게 할 때 의미가 있다”</blockquote>
     </section>
 
+    <section class="card" id="guestbook">
+      <h2>방명록 ✍️</h2>
+      <p style="margin-bottom:16px">다녀가셨다면 짧은 인사를 남겨 주세요.</p>
+      <form class="gb-form" id="gb-form">
+        <input id="gb-name" type="text" maxlength="20" placeholder="이름 (20자 이내)" required>
+        <textarea id="gb-message" maxlength="300" placeholder="남기고 싶은 말 (300자 이내)" required></textarea>
+        <div class="gb-row">
+          <span class="gb-status" id="gb-status" aria-live="polite"></span>
+          <span class="gb-count" id="gb-count">0 / 300</span>
+        </div>
+        <div class="gb-row" style="justify-content:flex-end">
+          <button type="submit">남기기</button>
+        </div>
+      </form>
+      <div class="gb-list" id="gb-list"><p class="gb-empty">불러오는 중…</p></div>
+    </section>
+
     <section>
       <a class="next" href="projects.html">애린호건이 만들고 있는 것 보러 가기 →</a>
     </section>
 
     <footer>© 2026 애린호건 · Erin Hogan</footer>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.115.0/dist/umd/supabase.js"></script>
+  <script src="supabase-config.js"></script>
+  <script src="guestbook.js"></script>
 </body>
 </html>

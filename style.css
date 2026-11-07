@@ -143,3 +143,27 @@ footer {
   h1 { font-size: 1.8rem; }
   .card { padding: 22px; }
 }
+
+/* 방명록 */
+.gb-form { display: grid; gap: 10px; margin-bottom: 8px; }
+.gb-form input, .gb-form textarea {
+  width: 100%; font: inherit; color: var(--text);
+  background: var(--bg); border: 1px solid var(--line);
+  border-radius: 10px; padding: 10px 12px;
+}
+.gb-form textarea { resize: vertical; min-height: 90px; }
+.gb-form input:focus, .gb-form textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.gb-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.gb-count, .gb-status { font-size: .85rem; color: var(--muted); }
+.gb-form button {
+  font: inherit; font-weight: 500; cursor: pointer;
+  border: none; border-radius: 999px; padding: 8px 20px;
+  background: var(--accent); color: #fff;
+}
+.gb-form button:disabled { opacity: .5; cursor: default; }
+.gb-list { margin-top: 20px; }
+.gb-item { padding: 16px 0; border-top: 1px solid var(--line); }
+.gb-head { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 2px; }
+.gb-head time { font-size: .85rem; color: var(--muted); }
+.gb-item p { white-space: pre-wrap; word-break: break-word; }
+.gb-empty { padding-top: 16px; }
