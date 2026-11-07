@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-page="home">
   <nav>
     <div class="wrap">
       <a class="logo" href="index.html">애린호건</a>
@@ -87,11 +87,12 @@
       <a class="next" href="projects.html">애린호건이 만들고 있는 것 보러 가기 →</a>
     </section>
 
-    <footer>© 2026 애린호건 · Erin Hogan</footer>
+    <footer>© 2026 애린호건 · Erin Hogan<span class="views" id="view-count"></span></footer>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.115.0/dist/umd/supabase.js"></script>
   <script src="supabase-config.js"></script>
   <script src="guestbook.js"></script>
+  <script src="views.js"></script>
 </body>
 </html>

@@ -167,3 +167,6 @@ footer {
 .gb-head time { font-size: .85rem; color: var(--muted); }
 .gb-item p { white-space: pre-wrap; word-break: break-word; }
 .gb-empty { padding-top: 16px; }
+
+/* 조회수 */
+.views { display: block; margin-top: 6px; font-size: .8rem; color: var(--muted); min-height: 1.2em; }
