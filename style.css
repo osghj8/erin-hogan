@@ -1,0 +1,145 @@
+/* 애린호건 사이트 공통 디자인 */
+:root {
+  --bg: #faf7f2;
+  --card: #ffffff;
+  --text: #22201d;
+  --muted: #6b655c;
+  --accent: #c2603a;
+  --accent-soft: #f6e6dd;
+  --line: #ebe4da;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #171513;
+    --card: #211e1b;
+    --text: #efe9e2;
+    --muted: #aaa196;
+    --accent: #e89770;
+    --accent-soft: #3a2a22;
+    --line: #322d28;
+  }
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Noto Sans KR", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.75;
+}
+a { color: inherit; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+
+/* 상단 메뉴 */
+nav {
+  position: sticky; top: 0; z-index: 10;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+nav .wrap {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 60px; gap: 12px;
+}
+.logo {
+  font-family: "Noto Serif KR", serif;
+  font-weight: 600; text-decoration: none; font-size: 1.1rem;
+}
+.menu { display: flex; gap: 4px; list-style: none; }
+.menu a {
+  display: block; padding: 6px 12px; border-radius: 999px;
+  text-decoration: none; color: var(--muted); font-size: .95rem;
+}
+.menu a:hover { color: var(--text); }
+.menu a.active { background: var(--accent-soft); color: var(--accent); font-weight: 500; }
+
+/* 머리말 */
+header { padding: 64px 0 48px; text-align: center; }
+.avatar {
+  width: 104px; height: 104px; border-radius: 50%;
+  margin: 0 auto 22px;
+  display: grid; place-items: center;
+  background: var(--accent-soft); color: var(--accent);
+  font-family: "Noto Serif KR", serif; font-size: 40px;
+}
+h1 { font-family: "Noto Serif KR", serif; font-size: 2.1rem; font-weight: 600; }
+.en { color: var(--muted); letter-spacing: .08em; margin-top: 2px; }
+.tagline { margin-top: 16px; font-size: 1.1rem; }
+.tags { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+.tag {
+  padding: 5px 13px; border-radius: 999px;
+  background: var(--accent-soft); color: var(--accent);
+  font-size: .9rem; font-weight: 500;
+}
+
+/* 본문 블록 */
+section { margin-bottom: 28px; }
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 28px;
+}
+h2 { font-size: 1.15rem; margin-bottom: 12px; }
+p { color: var(--muted); }
+
+.grid {
+  display: grid; gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.item {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 20px;
+}
+.item .icon { font-size: 1.5rem; }
+.item h3 { font-size: 1rem; margin: 8px 0 4px; }
+.item p { font-size: .92rem; }
+
+blockquote {
+  font-family: "Noto Serif KR", serif;
+  font-size: 1.15rem; text-align: center;
+  padding: 12px 8px; color: var(--text);
+}
+blockquote span { color: var(--accent); }
+
+/* 프로젝트 목록 */
+.project { display: flex; gap: 18px; align-items: flex-start; }
+.project .icon {
+  flex: none; width: 52px; height: 52px; border-radius: 14px;
+  display: grid; place-items: center; font-size: 1.5rem;
+  background: var(--accent-soft);
+}
+.status {
+  display: inline-block; margin-left: 6px;
+  padding: 1px 9px; border-radius: 999px;
+  font-size: .78rem; font-weight: 500; vertical-align: middle;
+  background: var(--accent-soft); color: var(--accent);
+}
+.status.done { background: var(--line); color: var(--muted); }
+
+/* 기록 목록 */
+.post { padding: 22px 0; border-bottom: 1px solid var(--line); }
+.post:last-child { border-bottom: none; padding-bottom: 0; }
+.post:first-child { padding-top: 0; }
+.post time { font-size: .85rem; color: var(--accent); }
+.post h3 { font-size: 1.05rem; margin: 2px 0 6px; }
+
+/* 다음 페이지 링크 */
+.next {
+  display: block; text-align: center; text-decoration: none;
+  padding: 16px; border-radius: 14px;
+  border: 1px dashed var(--line); color: var(--accent); font-weight: 500;
+}
+.next:hover { background: var(--accent-soft); }
+
+footer {
+  text-align: center; color: var(--muted);
+  font-size: .85rem; padding: 40px 0 56px;
+}
+
+@media (max-width: 480px) {
+  .logo { font-size: 1rem; }
+  .menu a { padding: 6px 9px; font-size: .9rem; }
+  h1 { font-size: 1.8rem; }
+  .card { padding: 22px; }
+}
